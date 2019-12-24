@@ -1,23 +1,23 @@
 fn main() {
-    let n = 12;
+    let n = 93;
     let fib = calculate_fib(n);
 
     println!("The {} number the fib squence is {}", n, fib);
 }
 
-fn calculate_fib(n: u32) -> u32 {
+fn calculate_fib(mut n: usize) -> usize {   
     // 0,  1,  1,  2,  3,  5,  8,  13,  21,  ...
 
-    let mut count = 2;
+    n -= 1;
     let mut first = 0;
     let mut second = 1;
-    let mut current: u32;
+    let mut current: usize;
 
-    while count <= n {
+    while n > 0 {
         current = first + second;
         first = second;
         second = current;
-        count += 1;
+        n -= 1;
     }
     second
 }
