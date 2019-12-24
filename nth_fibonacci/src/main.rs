@@ -2,7 +2,7 @@ fn main() {
     let n = 93;
     let fib = calculate_fib(n);
 
-    println!("The {} number the fib squence is {}", n, fib);
+    println!("The {} number the fib squence is {}", n, fib);    // 13_493_690_561_280_548_289 
 }
 
 fn calculate_fib(mut n: usize) -> usize {   
@@ -21,3 +21,4 @@ fn calculate_fib(mut n: usize) -> usize {
     }
     second
 }
+// cargo run --release
